@@ -58,7 +58,7 @@ public class longestSeq {
                 dp[i][j]=-1;
             }
         }
-        //System.out.println(longestCommonSubsequence(str1, str2, 5, 3,dp));
+        System.out.println(longestCommonSubsequence(str1, str2, 5, 3,dp));
         System.out.println(tabulation(str1, str2));
         
     }
