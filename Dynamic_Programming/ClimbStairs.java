@@ -16,6 +16,7 @@ public class ClimbStairs {
         dp[stairNo]= Noway(stairNo-1,dp)+Noway(stairNo-2,dp);
         return dp[stairNo];
     }
+    
     public static void main(String args[]){
         int n=5;
         int dp[]=new int[n+1];
