@@ -28,11 +28,13 @@ public class knapSack {
         int wt[]={2,5,1,3,4};
         int W=7;
         int dp[][]=new int[val.length+1][W+1];
+
         for(int i=0;i<dp.length;i++){
             for(int j=0;j<dp[0].length;j++){
             dp[i][j]=-1;
         }
         }
+        
         System.out.println(maxProfit(val, wt, W, val.length,dp));
     }
 }
