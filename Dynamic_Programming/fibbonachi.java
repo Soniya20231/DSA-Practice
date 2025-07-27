@@ -9,6 +9,7 @@ public class fibbonachi {
         if(f[num]!=0){   // f(n) is already calculated 
             return f[num]; 
         }
+        
        f[num]=fibbonachiNo(num-1,f)+fibbonachiNo(num-2,f);
        return f[num];
     }
