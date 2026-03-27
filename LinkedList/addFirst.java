@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.Scanner;
+
 //import java.util.LinkedList;
 
 public class addFirst {
@@ -34,12 +36,30 @@ public class addFirst {
         System.out.print("null");
 
     }
+    public static void Searchkey(int key){
+        Node temp=head;
+        while(temp!=null){
+            if(temp.data==key){
+                System.out.println("Key is present in the linkedList");
+                return;
+            }
+            temp=temp.next;
+        }
+        System.out.println("Key is not present in the linkedList");
+    }
     public static void main(String args[]){
         //LinkedList li=new LinkedList();
        // li.add(23);
         addFirst1(3);
-        //addFirst(34);
+        addFirst1(34);
         addFirst1(2);
+        addFirst1(8);
+        addFirst1(10);
         printlist();
+         System.out.println("");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the key to found");
+        int key=sc.nextInt();
+        Searchkey(key);
     }
 }

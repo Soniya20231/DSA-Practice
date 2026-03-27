@@ -1,21 +1,24 @@
 public class Nqueen {
-    public static void queens(char board[][],int row)
+    public static boolean queens(char board[][],int row)
     {
         if(row==board.length)
         {
             PrintBoard(board);
             count++;//to count the total ways
-            return;
+            return true;
         }
         for(int j=0;j<board.length;j++)
         {
             if(isSafe(board,row,j))
             {
             board[row][j]='Q';
-            queens(board, row+1);
+            if(queens(board, row+1)){
+                return true;
+            };
             board[row][j]='X';
             }
         }
+        return false;
         
     }
     public static boolean isSafe(char board[][],int row,int column){
@@ -59,7 +62,7 @@ public class Nqueen {
     static int count=0;
 
     public static void main(String[] args) {
-    int n=4;
+    int n=8;
       char chessboard[][] = new char[n][n];
       for(int i=0;i<n;i++)
       {
@@ -68,8 +71,10 @@ public class Nqueen {
             chessboard[i][j]='X';
         }
       }
+      //chessboard[0][0]='Q';
+    
       queens(chessboard, 0);
-      System.out.println("total ways to solve the nqueen problem are:-"+count);
+      //System.out.println("total ways to solve the nqueen problem are:-"+count);
 
     }
 }

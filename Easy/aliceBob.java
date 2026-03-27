@@ -1,4 +1,4 @@
-package Easy;
+//package Easy;
 import java.util.*;
 
 public class aliceBob {

@@ -1,7 +1,7 @@
 public class BubbleSorting {
     public static void main(String args[]){
    // int arr[]={5,4,1,3,2};
-   int arr[]={1,2,3,4,5};
+   int arr[]={1,2,3,5,4};
     int swap=0;
     for(int i=0;i<arr.length-1;i++){
         for(int j=0;j<arr.length-i-1;j++){
